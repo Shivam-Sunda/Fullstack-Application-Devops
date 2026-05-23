@@ -6,7 +6,7 @@ resource "aws_instance" "ec2" {
   ami                    = data.aws_ami.ami.image_id
   
   # Instance type for the EC2 instance, parameterized for flexibility
-  instance_type          = var.instance_type  # parameterized for flexibility
+  instance_type          = "t3.micro"  # parameterized for flexibility
   
   # The key pair name for SSH access to the instance
   key_name               = var.key_name
